@@ -43,9 +43,7 @@ void main()
 		if(REM_TT[prr]==0 && ind==1)			
 		{ printf("%d",prr);
 			Rem_P--;				
-			printf("P %d",prr+1); 
-			printf("\t\t\t%d",curr_T-ART[prr]);
-			printf("\t\t\t%d\n",curr_T-BT[prr]-ART[prr]);
+			
 			ww+=curr_T-ART[prr]-BT[prr]; 
 			tut+=curr_T-ART[prr]; 
 			ind=0; 
