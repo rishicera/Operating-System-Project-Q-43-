@@ -1,0 +1,40 @@
+void Round_Robin(int nnn,int REM_TT[10],int Cur_t,int ART[10], int BT[10]){
+	
+	float avg_ww,avg_tut;
+    int i,j,n=nnn,temp,B_T[20],prr[20],w_time[20],tut_t[20],total=0,LO;
+    
+    printf("\nThird round is Shortest Job First.\n");
+    
+    
+    for(i=0;i<n;i++)
+    {
+        B_T[i]=REM_TT[i];
+        w_time[i]=Cur_t-ART[i]-B_T[i];
+		prr[i]=i+1;
+    }
+	
+    for(i=0;i<n;i++)
+    {
+        LO=i;
+        for(j=i+1;j<n;j++)
+        {
+            if(B_T[j]<B_T[LO]){
+            	LO=j;
+            }
+        }
+        temp=B_T[i];
+        B_T[i]=B_T[LO];
+        B_T[LO]=temp;
+        temp=prr[i];
+        prr[i]=prr[LO];
+        prr[LO]=temp;
+    }
+	
+    for(i=1;i<n;i++)
+    {
+        for(j=0;j<i;j++){
+        	w_time[i]+=abs(B_T[j]);
+        }
+        total+=w_time[i];
+    }
+ 
