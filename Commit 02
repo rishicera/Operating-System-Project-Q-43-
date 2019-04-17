@@ -1,0 +1,33 @@
+printf("RR part 01- For Time-Quantum :-3.\n"); 
+	tq=3;
+	curr_T=0;
+	for(prr=0;Rem_P!=0;) 
+	{
+		if(REM_TT[prr]<=tq && REM_TT[prr]>0)
+		{ 
+			curr_T+=REM_TT[prr]; 
+			REM_TT[prr]=0; 
+			ind=1; 
+		} 
+		else if(REM_TT[prr]>0)
+		{ 
+			REM_TT[prr]-=tq; 
+			curr_T+=tq; 
+		} 
+		if(REM_TT[prr]==0 && ind==1)			
+		{ printf("%d",prr);
+			Rem_P--;				
+			printf("P %d",prr+1); 
+			printf("\t\t\t%d",curr_T-ART[prr]);
+			printf("\t\t\t%d\n",curr_T-BT[prr]-ART[prr]);
+			ww+=curr_T-ART[prr]-BT[prr]; 
+			tut+=curr_T-ART[prr]; 
+			ind=0; 
+                       
+		} 
+		if(prr==nnn-1){
+			x++;
+			if(x==2){
+				prr=0;
+				tq=6;
+				printf("DONE\n");
