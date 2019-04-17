@@ -1,0 +1,24 @@
+#include<stdio.h> 
+#include<conio.h>
+#include<stdlib.h>
+
+void main() 
+{
+	int prr,j,nnn,curr_T,Rem_P,ind,tq,ww,tut,ART[10],BT[10],REM_TT[10],x=1;
+	ind = 0;
+	ww = 0;
+	tut = 0;
+	printf("Total No of Process:-"); 
+	scanf("%d",&nnn);
+	Rem_P = nnn;
+	
+	printf("\nArrival Time and Burst Time:-\n");
+	for(prr = 0;prr < nnn;prr++) 
+	{
+		printf("\nFor Process P%d\n",prr+1);
+		printf("A_TIME= "); 
+		scanf("%d",&ART[prr]);
+		printf("B_TIME= "); 
+		scanf("%d",&BT[prr]); 
+		REM_TT[prr]=BT[prr]; 
+	} 
