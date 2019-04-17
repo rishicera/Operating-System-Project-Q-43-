@@ -1,0 +1,19 @@
+printf("RR part-02 Now For Time Quantum = 6. \n");
+				printf("DONE\n");
+			}
+			else{
+				break;
+			}
+		}
+		else if(curr_T >= ART[prr+1]){
+			prr++;
+		}
+		else{
+			prr=0;
+		}
+	}
+	
+	Round_Robin(nnn,REM_TT,curr_T,ART,BT);
+	
+	return 0;
+}
